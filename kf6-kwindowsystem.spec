@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.1
+%define		kdeframever	6.2
 %define		qtver		5.15.2
 %define		kfname		kwindowsystem
 
 Summary:	Access to the windowing system
 Name:		kf6-%{kfname}
-Version:	6.1.0
+Version:	6.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	0157d6b3717278454e4d4890d37537c7
+# Source0-md5:	4f4f1f2b777e773fb6d41bb026cee6d0
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
