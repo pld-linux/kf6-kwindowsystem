@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.2
+%define		kdeframever	6.3
 %define		qtver		6.5.0
 %define		kfname		kwindowsystem
 
 Summary:	Access to the windowing system
 Name:		kf6-%{kfname}
-Version:	6.2.0
+Version:	6.3.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	4f4f1f2b777e773fb6d41bb026cee6d0
+# Source0-md5:	4cfe20ba8e54a6e3d3ddfd5a021969c4
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -40,7 +40,7 @@ Requires:	Qt6Gui >= %{qtver}
 Requires:	Qt6Qml >= %{qtver}
 Requires:	Qt6WaylandClient >= %{qtver}
 Requires:	kf6-dirs
-Obsoletes:	kf5-%{kfname} < %{version}
+#Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -65,7 +65,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	Qt6Widgets-devel >= %{qtver}
-Obsoletes:	kf5-%{kfname}-devel < %{version}
+#Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
