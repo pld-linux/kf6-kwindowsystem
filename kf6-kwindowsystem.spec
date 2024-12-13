@@ -1,30 +1,30 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.8
+%define		kdeframever	6.9
 %define		qtver		6.5.0
 %define		kfname		kwindowsystem
 
 Summary:	Access to the windowing system
 Name:		kf6-%{kfname}
-Version:	6.8.0
+Version:	6.9.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	0e76d9791e12a314c05e6f4e93585999
+# Source0-md5:	a801e9e90e55f8f711b8ec60c5e11927
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
 BuildRequires:	Qt6Qml-devel >= %{qtver}
 BuildRequires:	Qt6WaylandClient-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16
-BuildRequires:	kf5-plasma-wayland-protocols-devel
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
 BuildRequires:	libstdc++-devel
 BuildRequires:	libxcb-devel
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
+BuildRequires:	plasma-wayland-protocols-devel >= 1.15.0
 BuildRequires:	qt6-linguist >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
