@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		6.5.0
 %define		kfname		kwindowsystem
 
 Summary:	Access to the windowing system
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	5c5e56759a290abd70a7a9c7924bede3
+# Source0-md5:	907cc962c4a099a6db734371a0d61a94
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -106,16 +106,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKF6WindowSystem.so.6
-%attr(755,root,root) %{_libdir}/libKF6WindowSystem.so.*.*
+%{_libdir}/libKF6WindowSystem.so.*.*
 %dir %{_libdir}/qt6/plugins/kf6/kwindowsystem
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kwindowsystem/KF6WindowSystemX11Plugin.so
+%{_libdir}/qt6/plugins/kf6/kwindowsystem/KF6WindowSystemX11Plugin.so
 %{_datadir}/qlogging-categories6/kwindowsystem.renamecategories
 %{_datadir}/qlogging-categories6/kwindowsystem.categories
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kwindowsystem/KF6WindowSystemKWaylandPlugin.so
+%{_libdir}/qt6/plugins/kf6/kwindowsystem/KF6WindowSystemKWaylandPlugin.so
 %dir %{_libdir}/qt6/qml/org/kde/kwindowsystem
 %{_libdir}/qt6/qml/org/kde/kwindowsystem/KWindowSystem.qmltypes
 %{_libdir}/qt6/qml/org/kde/kwindowsystem/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kwindowsystem/libKWindowSystem.so
+%{_libdir}/qt6/qml/org/kde/kwindowsystem/libKWindowSystem.so
 %{_libdir}/qt6/qml/org/kde/kwindowsystem/qmldir
 
 %files devel
