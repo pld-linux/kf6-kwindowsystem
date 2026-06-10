@@ -60,6 +60,18 @@ In addition to the high level API, this framework also provides
 several more low level classes for interaction with the X Windowing
 System.
 
+%description -l pl.UTF-8
+Wygodny dostęp do różnych właściwości i funkcjonalności systemu okien.
+
+KWindowSystem dostarcza informacji o systemie okien i pozwala na
+interakcję z nim. Dostarcza API wysokiego poziomu, który jest
+niezależny od systemu okien i ma implementacje specyficzne dla danej
+platformy. API jest wzorowane na X11, więc nie wszystkie
+funkcjonalności są dostępne na wszystkich systemach.
+
+Jako dodatek do API wysokiego poziomu, ten szkielet zawiera też wiele
+niskopoziomowych klas do interakcji z X Window.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
