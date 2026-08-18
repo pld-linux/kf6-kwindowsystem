@@ -8,7 +8,7 @@
 Summary:	Access to the windowing system
 Name:		kf6-%{kfname}
 Version:	6.29.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -106,6 +106,8 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
 
+# fix locales
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/{nan_TW@latin,nan}
 %find_lang %{kfname}5_qt --with-qm --all-name --with-kde
 
 %clean
